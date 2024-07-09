@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2930525761555168287
+--- !u!1 &481724346590856021
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,110 +8,51 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5831634068615595646}
-  - component: {fileID: 1030501951081179679}
-  - component: {fileID: 2526970114475865011}
-  - component: {fileID: 8720387153835511496}
-  - component: {fileID: 6812701915801574700}
-  - component: {fileID: 4832838805156198099}
+  - component: {fileID: 6535778336763096710}
+  - component: {fileID: 6990772746826569179}
+  - component: {fileID: 1343713555555539644}
   m_Layer: 0
-  m_Name: Bird
+  m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5831634068615595646
+--- !u!4 &6535778336763096710
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2930525761555168287}
+  m_GameObject: {fileID: 481724346590856021}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 1536165863848510848}
+  - {fileID: 2615064496182885650}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &1030501951081179679
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2930525761555168287}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &2526970114475865011
+--- !u!114 &6990772746826569179
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2930525761555168287}
+  m_GameObject: {fileID: 481724346590856021}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 295a1b3544db7b0baabe6825713dcc15, type: 3}
+  m_Script: {fileID: 11500000, guid: c86176292b3c8cf56943a0edcb25d883, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _flapForce: 4
-  _speed: 2.5
-  _rotationSpeed: 1
-  _maxRotationZ: 35
-  _minRotationZ: -60
---- !u!114 &8720387153835511496
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2930525761555168287}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 213c232523c691911af24f548b080db6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &6812701915801574700
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2930525761555168287}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36311ab319ade3a9d8e831e02579609b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!70 &4832838805156198099
+--- !u!70 &1343713555555539644
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2930525761555168287}
+  m_GameObject: {fileID: 481724346590856021}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -137,10 +78,10 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.03, y: -0.015}
-  m_Size: {x: 0.18, y: 0.14}
+  m_Offset: {x: -0.02, y: -0.01}
+  m_Size: {x: 0.2, y: 0.14}
   m_Direction: 1
---- !u!1 &8691384553664011900
+--- !u!1 &6753904604398054784
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -148,37 +89,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1536165863848510848}
-  - component: {fileID: 3563074875804405338}
+  - component: {fileID: 2615064496182885650}
+  - component: {fileID: 8602450620728062168}
   m_Layer: 0
-  m_Name: bird101
+  m_Name: bird201
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1536165863848510848
+--- !u!4 &2615064496182885650
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8691384553664011900}
+  m_GameObject: {fileID: 6753904604398054784}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 1
+  m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5831634068615595646}
+  m_Father: {fileID: 6535778336763096710}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &3563074875804405338
+--- !u!212 &8602450620728062168
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8691384553664011900}
+  m_GameObject: {fileID: 6753904604398054784}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -213,9 +154,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c17cbe806ce57714c89166f5b7d8b572, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1103ee6cf800f1642b9859e77fdb2f4f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.24, y: 0.24}
