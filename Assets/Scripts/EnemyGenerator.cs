@@ -6,7 +6,7 @@ public class EnemyGenerator : MonoBehaviour
     [SerializeField] private float _delay;
     [SerializeField] private float _lowerBound;
     [SerializeField] private float _upperBound;
-    [SerializeField] private ObjectPool _pool;
+    [SerializeField] private EnemyPool _pool;
 
     private void Start()
     {

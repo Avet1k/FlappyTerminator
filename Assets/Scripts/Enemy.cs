@@ -1,5 +1,5 @@
 using UnityEngine;
 
-public class Enemy : MonoBehaviour, IInteractable
+public class Enemy : MonoBehaviour, IInteractable, IRemovable
 {
 }
