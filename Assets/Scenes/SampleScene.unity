@@ -446,7 +446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e66085f97de6c887924f7f4f60887fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _container: {fileID: 1209128446}
+  _container: {fileID: 1389210207}
   _prefab: {fileID: -5622747306697787086, guid: a4a40d5f468bd87a19cd6100452afa71, type: 3}
 --- !u!4 &1207943401
 Transform:
@@ -461,7 +461,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1209128445
 GameObject:
@@ -473,7 +473,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1209128446}
   m_Layer: 0
-  m_Name: Container
+  m_Name: EnemiesContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -571,6 +571,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 13}
   m_EdgeRadius: 0
+--- !u!1 &1389210206
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1389210207}
+  m_Layer: 0
+  m_Name: BulletsContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1389210207
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1389210206}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1544993977
 GameObject:
   m_ObjectHideFlags: 0
@@ -582,6 +613,7 @@ GameObject:
   - component: {fileID: 1544993978}
   - component: {fileID: 1544993980}
   - component: {fileID: 1544993981}
+  - component: {fileID: 1544993982}
   m_Layer: 0
   m_Name: ObjectsRemover
   m_TagString: Untagged
@@ -648,6 +680,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pool: {fileID: 1878629310}
+--- !u!114 &1544993982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544993977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bf003904302a79b487ee20b470c736a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pool: {fileID: 1207943400}
 --- !u!1 &1878629306
 GameObject:
   m_ObjectHideFlags: 0
@@ -696,7 +741,8 @@ MonoBehaviour:
   _delay: 2
   _lowerBound: -2
   _upperBound: 2
-  _pool: {fileID: 1878629310}
+  _enemyPool: {fileID: 1878629310}
+  _bulletPool: {fileID: 1207943400}
 --- !u!114 &1878629310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -860,6 +906,34 @@ PrefabInstance:
     - target: {fileID: 2930525761555168287, guid: 552f30a0d63b4b8d6b2c80806864924a, type: 3}
       propertyPath: m_Name
       value: Bird
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756313710961811546, guid: 552f30a0d63b4b8d6b2c80806864924a, type: 3}
+      propertyPath: Pool
+      value: 
+      objectReference: {fileID: 1207943400}
+    - target: {fileID: 4756313710961811546, guid: 552f30a0d63b4b8d6b2c80806864924a, type: 3}
+      propertyPath: BulletPool
+      value: 
+      objectReference: {fileID: 1207943400}
+    - target: {fileID: 4756313710961811546, guid: 552f30a0d63b4b8d6b2c80806864924a, type: 3}
+      propertyPath: _bulletPool
+      value: 
+      objectReference: {fileID: 1207943400}
+    - target: {fileID: 4756313710961811546, guid: 552f30a0d63b4b8d6b2c80806864924a, type: 3}
+      propertyPath: _bulletSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756313710961811546, guid: 552f30a0d63b4b8d6b2c80806864924a, type: 3}
+      propertyPath: BulletColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756313710961811546, guid: 552f30a0d63b4b8d6b2c80806864924a, type: 3}
+      propertyPath: BulletColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756313710961811546, guid: 552f30a0d63b4b8d6b2c80806864924a, type: 3}
+      propertyPath: BulletColor.r
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5831634068615595646, guid: 552f30a0d63b4b8d6b2c80806864924a, type: 3}
       propertyPath: m_RootOrder

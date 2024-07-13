@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6535778336763096710}
   - component: {fileID: 6990772746826569179}
   - component: {fileID: 1343713555555539644}
+  - component: {fileID: 2144649803159215455}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -25,15 +26,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 481724346590856021}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2615064496182885650}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &6990772746826569179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81,6 +82,21 @@ CapsuleCollider2D:
   m_Offset: {x: -0.02, y: -0.01}
   m_Size: {x: 0.2, y: 0.14}
   m_Direction: 1
+--- !u!114 &2144649803159215455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 481724346590856021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e130f7fa65769972847ef013734894c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BulletPool: {fileID: 0}
+  BulletColor: {r: 1, g: 0, b: 0, a: 1}
+  _attackDelay: 2
 --- !u!1 &6753904604398054784
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,7 +172,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1103ee6cf800f1642b9859e77fdb2f4f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.24, y: 0.24}

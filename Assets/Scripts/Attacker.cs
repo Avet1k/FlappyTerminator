@@ -1,19 +1,8 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-public class Attacker : MonoBehaviour
+public abstract class Attacker : MonoBehaviour
 {
-    [SerializeField] private BulletPool _pool;
-
-    private KeyCode _shootKey = KeyCode.S;
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(_shootKey))
-        {
-            
-        }
-    }
+    [SerializeField] protected BulletPool BulletPool;
+    [SerializeField] protected Color BulletColor;
 }

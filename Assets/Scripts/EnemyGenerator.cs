@@ -6,7 +6,8 @@ public class EnemyGenerator : MonoBehaviour
     [SerializeField] private float _delay;
     [SerializeField] private float _lowerBound;
     [SerializeField] private float _upperBound;
-    [SerializeField] private EnemyPool _pool;
+    [SerializeField] private EnemyPool _enemyPool;
+    [SerializeField] private BulletPool _bulletPool;
 
     private void Start()
     {
@@ -30,7 +31,8 @@ public class EnemyGenerator : MonoBehaviour
         float positionY = Random.Range(_lowerBound, _upperBound);
         Vector3 point = new Vector3(transform.position.x, positionY, transform.position.z);
 
-        var enemy = _pool.GetObject();
+        var enemy = _enemyPool.GetObject();
+        enemy.SetBulletPool(_bulletPool);
         enemy.gameObject.SetActive(true);
         enemy.transform.position = point;
     }

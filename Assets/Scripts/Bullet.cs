@@ -2,17 +2,24 @@ using System;
 using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(SpriteRenderer))]
 public class Bullet : MonoBehaviour, IRemovable
 {
     [SerializeField] private float _speed;
-
+    
+    private SpriteRenderer _renderer;
+    
     public event UnityAction HitEnemy;
 
-    private Renderer _renderer;
-
-    private void Start()
+    private void Awake()
     {
-        _renderer = GetComponent<Renderer>();
+        _renderer = GetComponent<SpriteRenderer>();
+    }
+
+    private void Update()
+    {
+        transform.position = Vector3.MoveTowards(transform.position, transform.position + Vector3.right, 
+            _speed * Time.deltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -23,6 +30,6 @@ public class Bullet : MonoBehaviour, IRemovable
 
     public void SetColor(Color color)
     {
-        _renderer.material.color = color;
+        _renderer.color = color;
     }
 }
