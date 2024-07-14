@@ -8,5 +8,16 @@ public abstract class Attacker : MonoBehaviour
     [SerializeField] protected Color BulletColor;
     [SerializeField] protected float BulletSpeed;
 
-    protected abstract void Shoot();
+    protected void Shoot()
+    {
+        var bullet = BulletPool.GetObject();
+        Vector3 direction = transform.right;
+
+        bullet.transform.position = transform.position + transform.right;
+        bullet.transform.rotation = transform.rotation;
+        bullet.SetColor(BulletColor);
+        bullet.SetSpeed(BulletSpeed);
+        bullet.SetDirection(direction);
+        bullet.gameObject.SetActive(true);
+    }
 }

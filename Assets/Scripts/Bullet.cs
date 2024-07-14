@@ -11,6 +11,8 @@ public class Bullet : MonoBehaviour, IRemovable
     
     public event UnityAction HitEnemy;
 
+    public event UnityAction Disabled;
+
     private void Awake()
     {
         _renderer = GetComponent<SpriteRenderer>();
@@ -18,14 +20,18 @@ public class Bullet : MonoBehaviour, IRemovable
 
     private void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, transform.position + _direction, 
-            _speed * Time.deltaTime);
+        transform.position += _direction * (_speed * Time.deltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.TryGetComponent(out Enemy enemy))
             HitEnemy?.Invoke();
+    }
+
+    private void OnDisable()
+    {
+        Disabled?.Invoke();
     }
 
     public void SetColor(Color color)
