@@ -155,6 +155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BulletPool: {fileID: 0}
   BulletColor: {r: 0, g: 1, b: 0, a: 1}
+  BulletSpeed: 10
   _bulletSpeed: 1
 --- !u!1 &8691384553664011900
 GameObject:

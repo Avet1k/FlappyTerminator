@@ -96,7 +96,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BulletPool: {fileID: 0}
   BulletColor: {r: 1, g: 0, b: 0, a: 1}
-  _attackDelay: 2
+  BulletSpeed: 10
+  _attackDelay: 0.5
 --- !u!1 &6753904604398054784
 GameObject:
   m_ObjectHideFlags: 0
