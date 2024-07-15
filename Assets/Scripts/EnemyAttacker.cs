@@ -27,5 +27,4 @@ public class EnemyAttacker : Attacker
             Shoot();
         }
     }
-
 }
