@@ -8,7 +8,7 @@ public abstract class Attacker : MonoBehaviour
     [SerializeField] protected Color BulletColor;
     [SerializeField] protected float BulletSpeed;
 
-    protected void Shoot()
+    protected Bullet Shoot()
     {
         var bullet = BulletPool.GetObject();
         Vector3 direction = transform.right;
@@ -19,5 +19,7 @@ public abstract class Attacker : MonoBehaviour
         bullet.SetSpeed(BulletSpeed);
         bullet.SetDirection(direction);
         bullet.gameObject.SetActive(true);
+
+        return bullet;
     }
 }

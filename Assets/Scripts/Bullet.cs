@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -9,9 +8,9 @@ public class Bullet : MonoBehaviour, IRemovable
     private SpriteRenderer _renderer;
     private Vector3 _direction;
     
-    public event UnityAction HitEnemy;
+    public event UnityAction<Bullet> HitEnemy;
 
-    public event UnityAction Disabled;
+    public event UnityAction<Bullet> Disabled;
 
     private void Awake()
     {
@@ -26,12 +25,14 @@ public class Bullet : MonoBehaviour, IRemovable
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.TryGetComponent(out Enemy enemy))
-            HitEnemy?.Invoke();
+        {
+            HitEnemy?.Invoke(this);
+        }
     }
 
     private void OnDisable()
     {
-        Disabled?.Invoke();
+        Disabled?.Invoke(this);
     }
 
     public void SetColor(Color color)
