@@ -30,7 +30,7 @@ public class Bullet : MonoBehaviour, IRemovable
         {
             HitEnemy?.Invoke(this);
         }
-        
+
         Hit?.Invoke(this);
     }
 

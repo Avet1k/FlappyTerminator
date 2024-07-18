@@ -5,6 +5,8 @@ public class Game : MonoBehaviour
     [SerializeField] private Bird _bird;
     [SerializeField] private StartScreen _startScreen;
     [SerializeField] private EndGameScreen _endGameScreen;
+    [SerializeField] private BulletsContainer _bulletsContainer;
+    [SerializeField] private EnemiesContainer _enemiesContainer;
 
     private void OnEnable()
     {
@@ -48,5 +50,7 @@ public class Game : MonoBehaviour
     {
         Time.timeScale = 1;
         _bird.Reset();
+        _bulletsContainer.PutActiveObjectsInPool();
+        _enemiesContainer.PutActiveObjectsInPool();
     }
 }
