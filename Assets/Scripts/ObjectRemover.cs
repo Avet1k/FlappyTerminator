@@ -1,12 +1,12 @@
 using UnityEngine;
 
-public class ObjectRemover<T> : MonoBehaviour where T : MonoBehaviour, IRemovable
+public abstract class ObjectRemover<T> : MonoBehaviour where T : MonoBehaviour, IRemovable
 {
-    [SerializeField] private ObjectPool<T> _pool;
+    [SerializeField] protected ObjectPool<T> Pool;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.TryGetComponent(out T removable))
-            _pool.PutObject(removable);
+            Pool.PutObject(removable);
     }
 }

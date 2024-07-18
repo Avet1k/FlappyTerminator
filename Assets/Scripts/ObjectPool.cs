@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public abstract class ObjectPool<T> : MonoBehaviour where T : MonoBehaviour, IRemovable
 {
@@ -8,6 +9,8 @@ public abstract class ObjectPool<T> : MonoBehaviour where T : MonoBehaviour, IRe
 
     private Queue<T> _pool;
 
+    public event UnityAction<T> ObjectSpawned; 
+
     private void Awake()
     {
         _pool = new Queue<T>();
@@ -15,11 +18,15 @@ public abstract class ObjectPool<T> : MonoBehaviour where T : MonoBehaviour, IRe
     
     public T GetObject()
     {
+        T removable;
+        
         if (_pool.Count > 0)
-            return _pool.Dequeue();
+            removable = _pool.Dequeue();
+        else
+            removable = Instantiate(_prefab, _container);
 
-        var removable = Instantiate(_prefab, _container);
-
+        ObjectSpawned?.Invoke(removable);
+        
         return removable;
     }
 

@@ -10,6 +10,8 @@ public class Bullet : MonoBehaviour, IRemovable
     
     public event UnityAction<Bullet> HitEnemy;
 
+    public event UnityAction<Bullet> Hit;
+
     public event UnityAction<Bullet> Disabled;
 
     private void Awake()
@@ -28,6 +30,8 @@ public class Bullet : MonoBehaviour, IRemovable
         {
             HitEnemy?.Invoke(this);
         }
+        
+        Hit?.Invoke(this);
     }
 
     private void OnDisable()

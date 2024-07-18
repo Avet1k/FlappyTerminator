@@ -98,7 +98,7 @@ MonoBehaviour:
   BulletPool: {fileID: 0}
   BulletColor: {r: 1, g: 0, b: 0, a: 1}
   BulletSpeed: 5
-  _attackDelay: 0.5
+  _attackDelay: 100
 --- !u!50 &6048508248451864053
 Rigidbody2D:
   serializedVersion: 4
