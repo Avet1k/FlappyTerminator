@@ -40,7 +40,7 @@ public class Bird : MonoBehaviour
 
     private void ProcessCollision(IInteractable interactable)
     {
-        if (interactable is Ground or Enemy)
+        if (interactable is Ground or Enemy or Bullet)
             GameOver?.Invoke();
     }
     

@@ -898,6 +898,8 @@ MonoBehaviour:
   _bird: {fileID: 992010325}
   _startScreen: {fileID: 376794789}
   _endGameScreen: {fileID: 512758700}
+  _bulletsContainer: {fileID: 1389210208}
+  _enemiesContainer: {fileID: 1209128447}
 --- !u!1 &539387158
 GameObject:
   m_ObjectHideFlags: 0
@@ -1286,6 +1288,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1209128446}
+  - component: {fileID: 1209128447}
   m_Layer: 0
   m_Name: EnemiesContainer
   m_TagString: Untagged
@@ -1308,6 +1311,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1209128447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209128445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 400431cd0fffd924ba18553335554fae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pool: {fileID: 1878629310}
 --- !u!1 &1276834760
 GameObject:
   m_ObjectHideFlags: 0
@@ -1543,6 +1559,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1389210207}
+  - component: {fileID: 1389210208}
   m_Layer: 0
   m_Name: BulletsContainer
   m_TagString: Untagged
@@ -1565,6 +1582,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1389210208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1389210206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97e9afb011cbe20d1a465ce74f15b23b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pool: {fileID: 1207943400}
 --- !u!1 &1544993977
 GameObject:
   m_ObjectHideFlags: 0

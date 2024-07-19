@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(SpriteRenderer))]
-public class Bullet : MonoBehaviour, IRemovable
+public class Bullet : MonoBehaviour, IRemovable, IInteractable
 {
     private float _speed;
     private SpriteRenderer _renderer;
