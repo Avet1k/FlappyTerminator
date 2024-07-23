@@ -3,7 +3,7 @@ using UnityEngine.Events;
 
 [RequireComponent(typeof(BirdMover), typeof(BirdCollisionHandler), typeof(ScoreCounter)),
  RequireComponent(typeof(BirdAttacker))]
-public class Bird : MonoBehaviour
+public class Bird : MonoBehaviour, IHittable
 {
     private BirdCollisionHandler _collisionHandler;
     private BirdMover _mover;

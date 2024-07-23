@@ -157,6 +157,7 @@ MonoBehaviour:
   BulletPool: {fileID: 0}
   BulletColor: {r: 0, g: 1, b: 0, a: 1}
   BulletSpeed: 10
+  _shootCooldown: 0.5
 --- !u!114 &5471267281540960010
 MonoBehaviour:
   m_ObjectHideFlags: 0

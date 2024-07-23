@@ -26,12 +26,15 @@ public class Bullet : MonoBehaviour, IRemovable, IInteractable
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.TryGetComponent(out Enemy enemy))
+        if (other.TryGetComponent(out IHittable hittable))
         {
-            HitEnemy?.Invoke(this);
+            if (hittable is Enemy)
+            {
+                HitEnemy?.Invoke(this);
+            }
+            
+            Hit?.Invoke(this);
         }
-
-        Hit?.Invoke(this);
     }
 
     private void OnDisable()

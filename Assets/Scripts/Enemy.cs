@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(EnemyAttacker))]
-public class Enemy : MonoBehaviour, IInteractable, IRemovable
+public class Enemy : MonoBehaviour, IInteractable, IRemovable, IHittable
 {
     private EnemyAttacker _attacker;
 
